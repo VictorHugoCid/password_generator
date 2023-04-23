@@ -13,7 +13,7 @@ jobs:
           envkey_POSTGRES_USER: "postgres"
           envkey_POSTGRES_PASSWORD: "postgres"
           envkey_POSTGRES_DB: "passwords"
-          envkey_DATABASE_URL: "postgresql://postgres:postgres@names:5432/passwords"
+          envkey_DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/passwords"
           directory: back-end
           file_name: .env.test
           fail_on_empty: true
