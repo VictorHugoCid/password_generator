@@ -31,8 +31,6 @@ jobs:
       - name: Stop active containers
         run: docker compose down
       - name: Delete react docker volume if it exists
-        run: docker volume rm passwords_generator_react-volume # <nome da pasta>_<nome do volume> verificar esse passwordGen (nome da pasta no repositório) 
+        run:  if docker volume ls --quiet --filter name=passwords_generator_react-volume | grep -q .; then docker volume rm passwords_generator_react-volume; fi # <nome da pasta>_<nome do volume> verificar esse passwordGen (nome da pasta no repositório) 
       - name: build images
         run: docker compose up -d
-
-          
